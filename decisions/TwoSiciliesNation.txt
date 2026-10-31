@@ -1,0 +1,101 @@
+country_decisions = {
+	two_sicilies_nation = {
+		major = yes
+		potential = {
+			
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_two_sicilies_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = TTS }
+			tag = SIC
+			
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = western_sicily_area
+				area = sicily_area
+				area = corsica_sardinia_area
+				area = naples_area
+				area = apulia_area
+				area = calabria_area
+			}
+
+			NOT = {
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 8
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+
+			western_sicily_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+
+			sicily_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+
+			corsica_sardinia_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+
+			naples_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+
+			apulia_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+
+			calabria_area = {
+				type = all
+				AND = { owned_by = ROOT is_core = ROOT }
+			}
+		}
+		effect = {
+			change_tag = TTS
+			if = {
+				limit = {
+					NOT = { tag = NAP }
+					NOT = { was_tag = NAP }
+				}
+				swap_non_generic_missions = yes
+			}
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			set_country_flag = formed_two_sicilies_flag
+			add_prestige = 10
+			if = {
+				limit = {
+					has_custom_ideas = no
+
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

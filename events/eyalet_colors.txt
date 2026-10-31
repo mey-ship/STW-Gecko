@@ -1,0 +1,54 @@
+namespace = eyalet_colors
+
+country_event = {
+	id = eyalet_colors.1
+	title = eyalet_colors.1.t
+	desc = eyalet_colors.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = eyalet_colors.1.a
+
+		every_subject_country = {
+			limit = {
+				OR = {
+					is_subject_of_type = eyalet
+					is_subject_of_type = core_eyalet
+					is_subject_of_type = vassal
+					is_subject_of_type = march
+					is_subject_of_type = client_vassal
+					is_subject_of_type = client_march
+					is_subject_of_type = canton
+					is_subject_of_type = appanage
+				}
+			}
+
+			change_country_color = {
+				country = ROOT
+			}
+		}
+		gecko_lighten_vassal_colors_effect = yes
+	}
+
+	option = {
+		name = eyalet_colors.1.b
+
+		every_subject_country = {
+			limit = {
+				OR = {
+					is_subject_of_type = eyalet
+					is_subject_of_type = core_eyalet
+					is_subject_of_type = vassal
+					is_subject_of_type = march
+					is_subject_of_type = client_vassal
+					is_subject_of_type = client_march
+					is_subject_of_type = canton
+					is_subject_of_type = appanage
+				}
+			}
+
+			restore_country_color = yes
+		}
+	}
+}
