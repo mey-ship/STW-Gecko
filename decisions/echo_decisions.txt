@@ -882,7 +882,6 @@ country_decisions = {
 			china_superregion = {destroy_province_permanently = yes }
 			far_east_superregion = {destroy_province_permanently = yes }
 			india_superregion = {destroy_province_permanently = yes }
-			southern_africa_superregion = {destroy_province_permanently = yes }
 			tartary_superregion = {destroy_province_permanently = yes }
 			mongolia_region = {destroy_province_permanently = yes }
 			east_siberia_region = {destroy_province_permanently = yes }
