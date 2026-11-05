@@ -9,6 +9,9 @@ capital = 45	# Lübeck
 historical_friend = HAM #Hamburg
 historical_friend = BRE #Bremen
 historical_friend = RIG #Riga
+add_truce_with = BRA
+add_truce_with = SWI
+add_truce_with = HSA
 
 1444.11.11 = {
 	monarch = {
